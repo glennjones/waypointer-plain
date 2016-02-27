@@ -7,24 +7,25 @@ exports.register = function (plugin, options, next) {
 
     const assetDirPath = Path.join(__dirname,  Path.sep + 'assets');
     const templateDirPath = Path.join(__dirname,  Path.sep + 'templates');
+    const shortName =  'plain';
 
     let theme = {
         'name': Package.name,
         'version': Package.version,
-        'shortName': 'plain',
+        'shortName': shortName,
         'templatesPath': templateDirPath,
         'partialsPath': templateDirPath + Path.sep + 'withPartials',
         'groupPages': false,
         'groupItemPages': false,
         'assetPath': assetDirPath,
         'cssLinks': [
-            '/waypointer/plain/css/plain.css',
-            '/waypointer/plain/css/pure-min.css',
-            '/waypointer/plain/css/tomorrow.min.css'
+            '/waypointer/' + shortName + '/css/plain.css',
+            '/waypointer/' + shortName + '/css/pure-min.css',
+            '/waypointer/' + shortName + '/css/tomorrow.min.css'
         ],
         'jsLinks': [
-            '/waypointer/plain/js/plain.js',
-            '/waypointer/plain/js/highlight.min.js'
+            '/waypointer/' + shortName + '/js/plain.js',
+            '/waypointer/' + shortName + '/js/highlight.min.js'
         ]
     }
     // Not used for this theme

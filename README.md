@@ -1,4 +1,4 @@
-# waypointer
+# waypointer-plain
 
 ## IN DEVELOPMENT - API NOT STABLE
 
