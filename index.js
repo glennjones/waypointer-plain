@@ -14,9 +14,8 @@ exports.register = function (plugin, options, next) {
         'shortName': 'plain',
         'templatesPath': templateDirPath,
         'partialsPath': templateDirPath + Path.sep + 'withPartials',
-        'halpersPath': templateDirPath + Path.sep + 'helpers',
         'groupPages': false,
-        'groupItemPages': null,
+        'groupItemPages': false,
         'assetPath': assetDirPath,
         'cssLinks': [
             '/waypointer/plain/css/plain.css',
@@ -28,6 +27,8 @@ exports.register = function (plugin, options, next) {
             '/waypointer/plain/js/highlight.min.js'
         ]
     }
+    // Not used for this theme
+    //'helpersPath': templateDirPath + Path.sep + 'helpers',
 
     if(Hoek.reach(Package, 'repository.url')){
         theme.url = Hoek.reach(Package, 'repository.url');
