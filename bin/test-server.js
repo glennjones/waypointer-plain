@@ -93,7 +93,7 @@ server.route([{
             getThemeData(request.server, {}, (err,theme) => {
                 let out = Hoek.clone(WaypointerJSON);
                 out.theme = theme;
-                reply.view('index.html', out);
+                reply.view('plain-index.html', out);
             });
         }
     }

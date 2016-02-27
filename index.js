@@ -20,12 +20,12 @@ exports.register = function (plugin, options, next) {
         'assetPath': assetDirPath,
         'cssLinks': [
             '/waypointer/plain/css/plain.css',
-            '//yui.yahooapis.com/pure/0.6.0/pure-min.css',
-            '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/tomorrow.min.css'
+            '/waypointer/plain/css/pure-min.css',
+            '/waypointer/plain/css/tomorrow.min.css'
         ],
         'jsLinks': [
             '/waypointer/plain/js/plain.js',
-            '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js'
+            '/waypointer/plain/js/highlight.min.js'
         ]
     }
 
