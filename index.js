@@ -11,19 +11,20 @@ exports.register = function (plugin, options, next) {
     let theme = {
         'name': Package.name,
         'version': Package.version,
-        'templatePath': templateDirPath,
+        'shortName': 'plain',
+        'templatesPath': templateDirPath,
         'partialsPath': templateDirPath + Path.sep + 'withPartials',
         'halpersPath': templateDirPath + Path.sep + 'helpers',
         'groupPages': false,
         'groupItemPages': null,
         'assetPath': assetDirPath,
         'cssLinks': [
-            'plain/css/plain.css',
+            '/waypointer/plain/css/plain.css',
             '//yui.yahooapis.com/pure/0.6.0/pure-min.css',
             '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/tomorrow.min.css'
         ],
         'jsLinks': [
-            'plain/js/plain.js',
+            '/waypointer/plain/js/plain.js',
             '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js'
         ]
     }

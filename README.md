@@ -2,40 +2,31 @@
 
 ## IN DEVELOPMENT - API NOT STABLE
 
-A HAPI plug-in that provides a template framework for OpenAPI (aka swagger).
+A plain html theme for the waypointer API auto documentation tool.
 
 ````bash
-$ npm install waypointer
+$ npm install waypointer-plain
 ```
 
 ``` javascript
-const Inert = require('inert');
-const Vision = require('vision');
-const HapiSwagger = require('hapi-swagger');
 const Waypointer = require('waypointer');
 
-let server = new Hapi.Server();
-server.connection({
-    host: 'localhost',
-    port: 3007
+let options = {
+    'swagger': {... a swagger json onject}
+    'themes': [{
+        theme: require('waypointer-plain')
+    }]
+}
+
+waypointer.json( options, (err, waypointer) => {
+     // do something with json
 });
 
-server.register([
-    Inert,
-    Vision,
-    HapiSwagger,
-    Waypointer], (err) => {
+options.dist = 'a path for dist folder';
 
-        server.route(Routes);
-
-        server.start((err) => {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log('Server running at:', server.info.uri);
-            }
-        });
-    });
+waypointer.buildDist( options, (err, waypointer) => {
+     // do something when dist is built
+});
 ```
 
 

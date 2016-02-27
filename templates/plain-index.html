@@ -93,9 +93,9 @@
                     {{#if parameters.header}}
                         <h3>Headers parameters</h3>
                         <table class="parameter-table pure-table pure-table-bordered">
-                            {{> tablehead }}
+                            {{> plain-tablehead }}
                         <tbody>
-                            {{> tablerow }}
+                            {{> plain-tablerow }}
                         </tbody>
                         </table>
                     {{/if}}
@@ -103,10 +103,10 @@
                     {{#if parameters.query}}
                         <h3>Querystring parameters</h3>
                         <table class="parameter-table pure-table pure-table-bordered">
-                            {{> tablehead }}
+                            {{> plain-tablehead }}
                         <tbody>
                             {{#each parameters.query}}
-                                {{> tablerow }}
+                                {{> plain-tablerow }}
                             {{/each}}
                         </tbody>
                         </table>
@@ -115,10 +115,10 @@
                     {{#if parameters.path}}
                         <h3>Path parameters</h3>
                         <table class="parameter-table pure-table pure-table-bordered">
-                            {{> tablehead }}
+                            {{> plain-tablehead }}
                         <tbody>
                             {{#each parameters.path}}
-                                {{> tablerow }}
+                                {{> plain-tablerow }}
                             {{/each}}
                         </tbody>
                         </table>
@@ -127,10 +127,10 @@
                     {{#if parameters.form}}
                         <h3>Form parameters</h3>
                         <table class="parameter-table pure-table pure-table-bordered">
-                            {{> tablehead }}
+                            {{> plain-tablehead }}
                         <tbody>
                             {{#each parameters.form}}
-                                {{> tablerow }}
+                                {{> plain-tablerow }}
                             {{/each}}
                         </tbody>
                         </table>

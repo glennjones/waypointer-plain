@@ -1,33 +1,34 @@
 {
-  "name": "waypointer-plain",
-  "version": "0.1.0",
-  "description": "A plain html theme for waypointer.",
-  "keywords": [
-    "plain",
-    "api",
-    "documentation",
-    "openapi",
-    "swagger"
-  ],
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Glenn Jones <glennjonesnet@gmail.com> (http://glennjones.net/)",
-  "license": "MIT",
-  "devDependencies": {
-    "inert": "^3.2.0",
-    "vision": "^4.0.1",
-    "handlebars": "^4.0.5",
-    "handlebars-helpers-dev": "glennjones/handlebars-helpers-dev",
-    "blipp": "^2.3.0",
-    "good": "^6.5.0",
-    "good-console": "^5.3.0",
-    "hapi": "^13.0.0",
-    "hoek": "^3.0.4",
-    "wreck": "7.0.0"
-  },
-  "dependencies": {
-    "hoek": "^3.0.4"
-  }
+    "name": "waypointer-plain",
+    "version": "0.2.0",
+    "description": "A plain html theme for waypointer.",
+    "keywords": [
+        "plain",
+        "api",
+        "documentation",
+        "openapi",
+        "swagger"
+    ],
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/glennjones/waypointer-plain"
+    },
+    "author": "Glenn Jones <glennjonesnet@gmail.com> (http://glennjones.net/)",
+    "license": "MIT",
+    "devDependencies": {
+        "inert": "^3.2.0",
+        "vision": "^4.0.1",
+        "handlebars": "^4.0.5",
+        "handlebars-helpers-dev": "glennjones/handlebars-helpers-dev",
+        "blipp": "^2.3.0",
+        "good": "^6.5.0",
+        "good-console": "^5.3.0",
+        "hapi": "^13.0.0",
+        "hoek": "^3.0.4",
+        "wreck": "7.0.0"
+    }
 }
