@@ -4,7 +4,7 @@
 
 A plain html theme for the waypointer API auto documentation tool.
 
-![Image of the hub ui](https://raw.githubusercontent.com/glennjones/waypointer-plain/master/ui/hub-ui01.png)
+![Image of the hub ui](https://raw.githubusercontent.com/glennjones/waypointer-plain/master/ui/plain-ui01.png)
 
 ````bash
 $ npm install waypointer-plain
