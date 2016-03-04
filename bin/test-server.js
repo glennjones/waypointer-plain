@@ -64,7 +64,8 @@ server.views({
     path: templateDirPath,
     partialsPath: templateDirPath + Path.sep + 'withPartials',
     helpersPath: templateDirPath + Path.sep + 'helpers',
-    isCached: false
+    isCached: false,
+    compileOptions: {preventIndent: true}
 });
 
 
@@ -87,19 +88,28 @@ const getThemeData = function(server, option, callback){
 
 server.route([{
     method: 'GET',
-    path: '/waypointer/',
+    path: '/',
+    config: {
+        handler: (request, reply) => {
+            reply.redirect('/waypointer/plain');
+        }
+    }
+},{
+    method: 'GET',
+    path: '/waypointer/plain',
     config: {
         handler: (request, reply) => {
             getThemeData(request.server, {}, (err,theme) => {
                 let out = Hoek.clone(WaypointerJSON);
                 out.theme = theme;
+                out.theme.pathRoot = '/waypointer/plain'
                 reply.view('plain-index.html', out);
             });
         }
     }
 },{
     method: 'GET',
-    path: '/waypointer/waypointer.json',
+    path: '/waypointer.json',
     config: {
         handler: (request, reply) => {
             getThemeData(request.server,{}, (err,theme) => {
@@ -111,7 +121,7 @@ server.route([{
     }
 },{
     method: 'GET',
-    path: '/waypointer/plain/{path*}',
+    path: '/waypointer/assets/plain/{path*}',
     handler: {
         directory: {
             path: assetDirPath,

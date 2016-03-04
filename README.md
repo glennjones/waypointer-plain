@@ -4,6 +4,8 @@
 
 A plain html theme for the waypointer API auto documentation tool.
 
+![Image of the hub ui](https://raw.githubusercontent.com/glennjones/waypointer-plain/master/ui/hub-ui01.png)
+
 ````bash
 $ npm install waypointer-plain
 ```
@@ -29,17 +31,14 @@ waypointer.buildDist( options, (err, waypointer) => {
 });
 ```
 
+## TODO
+* Add images of interface
+* Add description of parent project
+* Add grunt to to concat the js and css files
+* Add media queries - the orginal layout is designed for desktop
+* Add documentation of the key features in templates
+* Add documentation of forking the project and reuse of templates
 
-
-
-## Lab test
-The project has integration and unit tests. To run the test within the project type one of the following commands.
-```bash
-$ lab
-$ lab -r html -o coverage.html
-$ lab -r html -o coverage.html --lint
-$ lab -r console -o stdout -r html -o coverage.html --lint
-```
 
 ## Issues
 If you find any issue please file here on github and I will try and fix them.

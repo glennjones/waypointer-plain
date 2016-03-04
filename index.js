@@ -15,17 +15,18 @@ exports.register = function (plugin, options, next) {
         'shortName': shortName,
         'templatesPath': templateDirPath,
         'partialsPath': templateDirPath + Path.sep + 'withPartials',
+        'indexPage': true,
         'groupPages': false,
-        'groupItemPages': false,
+        'itemPages': false,
         'assetPath': assetDirPath,
         'cssLinks': [
-            '/waypointer/' + shortName + '/css/plain.css',
-            '/waypointer/' + shortName + '/css/pure-min.css',
-            '/waypointer/' + shortName + '/css/tomorrow.min.css'
+            '/waypointer/assets/' + shortName + '/css/plain.css',
+            '/waypointer/assets/' + shortName + '/css/pure-min.css',
+            '/waypointer/assets/' + shortName + '/css/tomorrow.min.css'
         ],
         'jsLinks': [
-            '/waypointer/' + shortName + '/js/plain.js',
-            '/waypointer/' + shortName + '/js/highlight.min.js'
+            '/waypointer/assets/' + shortName + '/js/plain.js',
+            '/waypointer/assets/' + shortName + '/js/highlight.min.js'
         ]
     }
     // Not used for this theme
