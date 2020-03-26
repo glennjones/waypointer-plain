@@ -1,6 +1,6 @@
 {
     "name": "waypointer-plain",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "A plain html theme for waypointer.",
     "keywords": [
         "plain",
@@ -19,6 +19,9 @@
     },
     "author": "Glenn Jones <glennjonesnet@gmail.com> (http://glennjones.net/)",
     "license": "MIT",
+    "dependencies": {
+        "@hapi/hoek": "^9.0.2"
+    },
     "devDependencies": {
         "inert": "^3.2.0",
         "vision": "^4.0.1",
