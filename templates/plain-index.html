@@ -95,7 +95,9 @@
                         <table class="parameter-table pure-table pure-table-bordered">
                             {{> plain-tablehead }}
                         <tbody>
-                            {{> plain-tablerow }}
+                            {{#each parameters.header}}
+                                {{> plain-tablerow }}
+                            {{/each}}
                         </tbody>
                         </table>
                     {{/if}}
