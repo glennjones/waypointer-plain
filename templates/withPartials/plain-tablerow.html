@@ -2,17 +2,32 @@
     <td>{{name}}</td>
     <td>{{type}}</td>
     <td>
-        {{#if required}}<strong>required</strong> {{/if}}
-        {{description}}
-        {{#if default}} Dafault: <code>{{this.default}}</code>{{/if}}
-        {{#if enum}}
-        <div>Excepted values:
+        {{#if required}}<strong>Required</strong>{{/if}}
+        {{#trim}}{{description}}. {{/trim}}
+        {{#if default}} Default value is: <code>{{this.default}}</code>. {{/if}}
+
+        {{#with x-constraint}}
+            {{#greater}}Min: <code>{{.}}</code> {{/greater}}
+            {{#with length}}Required length: <code>{{.}}</code>{{/with}}
+        {{/with}}
+        {{#if maximum}}Max: <code>{{maximum}}</code> {{/if}}
+
+        {{#if maxLength}}Max chars: <code>{{maxLength}}</code> {{/if}}
+
+        {{#if enum}}<span>Excepted values are:
             <ul>
                 {{#each enum}}
                 <li><code>{{this}}</code></li>{{/each}}
             </ul>
-        </div>
+        </span>
         {{/if}}
+
+
     </td>
-    <td><code>{{example}}</code></td>
+    <td><code>
+    {{#with x-meta}}
+        {{#example}}{{.}}{{/example}}
+    {{/with}}
+    </code></td>
 </tr>
+
