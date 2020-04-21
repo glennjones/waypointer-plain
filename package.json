@@ -1,6 +1,6 @@
 {
     "name": "waypointer-plain",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "A plain html theme for waypointer.",
     "keywords": [
         "plain",
@@ -11,24 +11,31 @@
     ],
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev-debug": "node --inspect-brk=9229 ./bin/test-server.js"
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/glennjones/waypointer-plain"
     },
-    "author": "Glenn Jones <glennjonesnet@gmail.com> (http://glennjones.net/)",
+    "author": {
+        "name": "Glenn Jones",
+        "email": "glennjonesnet@gmail.com",
+        "url": "http://glennjones.net/"
+    },
     "license": "MIT",
     "devDependencies": {
-        "inert": "^3.2.0",
-        "vision": "^4.0.1",
-        "handlebars": "^4.0.5",
-        "handlebars-helpers-dev": "glennjones/handlebars-helpers-dev",
-        "blipp": "^2.3.0",
-        "good": "^6.5.0",
-        "good-console": "^5.3.0",
-        "hapi": "^13.0.0",
-        "hoek": "^3.0.4",
-        "wreck": "7.0.0"
+        "@hapi/code": "^8.0.1",
+        "@hapi/hapi": "^19.1.1",
+        "@hapi/inert": "^6.0.1",
+        "@hapi/lab": "^22.0.4",
+        "@hapi/vision": "^6.0.0",
+        "@hapi/wreck": "^17.0.0",
+        "blipp": "^4.0.1",
+        "nunjucks": "^3.2.1",
+        "@glennjones/nunjucks-tools": "0.0.2"
+    },
+    "dependencies": {
+        "@hapi/hoek": "^9.0.4"
     }
 }

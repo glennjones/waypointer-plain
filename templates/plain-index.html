@@ -223,7 +223,7 @@
                     <div class="tabs">
                     {% for code in endpoint.code %}
                         <input id="tab-{{endpointId}}-{{code.name}}-code" type="radio" name="grp-{{endpointId}}-code" {%if loop.index === 1%}checked="checked"{% endif %} />
-                        <label for="tab-{{endpointId}}-{{code.name}}-code">{{code.name}}{{loop.index}}</label>
+                        <label for="tab-{{endpointId}}-{{code.name}}-code">{{code.name}}</label>
                         <div>
                             <pre><code class="{{code.format}}">{{code.snippet}}</code></pre>
                         </div>
